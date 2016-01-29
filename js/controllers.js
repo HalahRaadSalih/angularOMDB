@@ -1,20 +1,9 @@
-var app = angular.module("OMDB", ["ngRoute"]);
+var app = angular.module("OMDB");
 
-app.config(function($routeProvider) {
-	$routeProvider
-		.when('/', {
-			templateUrl: 'partials/header.html',
-			controller: 'Header'
-		}).when('/second', {
-			templateUrl: 'partials/footer.html',
-			controller: 'Footer'
-		});
+app.controller('HeaderController', function($scope) {
+	$scope.name = 'This is header controller';
 });
 
-app.controller('Header', function($scope) {
-	$scope.name = 'This is header controller'
-});
-
-app.controller('Footer', function($scope) {
-	$scope.name = 'This is footer controller'
+app.controller('FooterController', function($scope) {
+	$scope.name = 'This is footer controller';
 });
