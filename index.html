@@ -31,8 +31,13 @@
             </center>
         </form>
         <hr>
+        <!-- movie list div -->
         <div ng-repeat="result in results" class="panel-body">
-            <a href="{{ result.imdbID}}"><img src="{{ result.Poster }}" style="width:89px;height:137px;"></a>
+            <a href="http://www.omdbapi.com/?i={{ result.imdbID }}"><img src="{{ result.Poster }}" style="width:89px;height:137px;" ng-click="singleMovieClick()"> {{ result.Title }}</a>
+        </div>
+        <!-- individual movie div -->
+        <div>
+        	
         </div>
     </div>
     <!--     <div ng-view ng-controller="MovieController">
