@@ -11,7 +11,9 @@ app.controller('OMDBController', function($scope, $http, $location) {
 		});
 	};
 	$scope.singleMovieClick = function() {
-		
+		$http.get(href).success(function(data) {
+			console.log(data);
+		})
 	};
 });
 

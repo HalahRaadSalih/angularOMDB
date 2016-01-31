@@ -33,7 +33,7 @@
         <hr>
         <!-- movie list div -->
         <div ng-repeat="result in results" class="panel-body">
-            <a href="http://www.omdbapi.com/?i={{ result.imdbID }}"><img src="{{ result.Poster }}" style="width:89px;height:137px;" ng-click="singleMovieClick()"> {{ result.Title }}</a>
+            <a href="http://www.omdbapi.com/?i={{ result.imdbID }}"><img src="{{ result.Poster }}" style="width:89px;height:137px;" ng-click="singleClick()"> {{ result.Title }}</a>
         </div>
         <!-- individual movie div -->
         <div>
